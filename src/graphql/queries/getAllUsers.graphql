@@ -1,0 +1,12 @@
+query GetAllUsers {
+  getAllUsers {
+    ... on Users {
+      entities {
+        ...user
+      }
+    }
+    ... on UserNotFound {
+      message
+    }
+  }
+}

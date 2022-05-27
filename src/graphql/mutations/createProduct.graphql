@@ -1,0 +1,13 @@
+mutation CreateProduct($input: ProductCreatedInput!) {
+  createProduct(input: $input) {
+    ... on ProductCreated {
+      message
+      entity {
+        ...product
+      }
+    }
+    ... on ProductNotFound {
+      message
+    }
+  }
+}

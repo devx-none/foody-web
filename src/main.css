@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+}
+
+#App {
+  display: flex;
+  min-height: 100vh;
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary-500 rounded-full min-w-[90px] py-2 px-4 text-white font-bold lg:hover:bg-primary-600;
+  }
+  .btn-secondary {
+    @apply bg-primary-600 rounded-full min-w-[90px] py-2 px-4 text-white font-bold lg:hover:bg-primary-500;
+  }
+  .btn-danger {
+    @apply bg-red-700 rounded-full min-w-[90px] py-2 px-4 text-white font-bold lg:hover:bg-red-800;
+  }
+  .input-primary {
+    @apply h-[50px] py-3 px-6 text-base font-normal text-gray-800 border-2 border-primary-500 border-solid rounded-full select-none focus:border-primary-300;
+    box-shadow: none !important;
+    outline: none !important;
+  }
+}
+
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #b46c00 white;
+}
+.custom-scrollbar::-webkit-scrollbar {
+  width: 1rem;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: white;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #313131;
+  border-radius: 15px;
+  border: 5px solid white;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #b46c00;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox */
+input[type='number'] {
+  -moz-appearance: textfield;
+}
